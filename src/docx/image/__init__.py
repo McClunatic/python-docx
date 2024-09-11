@@ -10,6 +10,7 @@ from docx.image.jpeg import Exif, Jfif
 from docx.image.png import Png
 from docx.image.tiff import Tiff
 from docx.image.svg import Svg
+from docx.image.emf import Emf
 
 SIGNATURES = (
     # class, offset, signature_bytes
@@ -23,4 +24,5 @@ SIGNATURES = (
     (Bmp, 0, b"BM"),
     (Svg, 0, b"<svg "),
     (Svg, 0, b"<?xml version="),
+    (Emf, 40, b" EMF"),
 )
