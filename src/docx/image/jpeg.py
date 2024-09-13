@@ -306,9 +306,9 @@ class _App0Marker(_Marker):
 
     def _dpi(self, density):
         """Return dots per inch corresponding to `density` value."""
-        if self._density_units == 1:
+        if self._density_units == 1 and density > 0:
             dpi = density
-        elif self._density_units == 2:
+        elif self._density_units == 2 and density > 0:
             dpi = int(round(density * 2.54))
         else:
             dpi = 72
